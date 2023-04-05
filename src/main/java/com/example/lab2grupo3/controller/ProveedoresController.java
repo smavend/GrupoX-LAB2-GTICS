@@ -45,8 +45,13 @@ public class ProveedoresController {
         }
         return "redirect:/proveedor";
     }
+    @GetMapping(value="/proveedor/nuevo")
+    public String nuevaProveedor(){
+        return "proveedorNuevo";
+    }
+
     @PostMapping(value = "proveedor/guardar")
-    public String guardarDistribuidora(Proveedor proveedor){
+    public String guardarProveedor(Proveedor proveedor){
         proveedorRepository.save(proveedor);
         return "redirect:/proveedor";
     }

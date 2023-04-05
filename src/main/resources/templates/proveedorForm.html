@@ -31,27 +31,27 @@
         </nav>
         <div style="padding-bottom: 15px;" class="container">
             <div style="text-align: center;"><h2>Editar Proveedor</h2></div>
-            <form method="post" th:action="@{/proveedor/guardar}" th:object="${distro}">
-                <input type="hidden" th:field="*{idDistribuidora}">
+            <form method="post" th:action="@{/proveedor/guardar}" th:object="${prov}">
+                <input type="hidden" th:field="*{idProveedores}">
                 <div class="mb-3">
                     <label for="nombre">Nombre</label>
                     <input type="text" class="form-control" th:field="*{nombre}">
                 </div>
                 <div class="mb-3">
-                    <label for="fundacion">Fundación</label>
-                    <input type="text" class="form-control" th:field="*{fundacion}">
+                    <label for="telefono">Teléfono</label>
+                    <input type="number" class="form-control" th:field="*{telefono}">
                 </div>
                 <div class="mb-3">
-                    <label for="sede">Sede</label>
-                    <input type="text" class="form-control" th:field="*{sede}">
+                    <label for="elemento">Elemento</label>
+                    <input type="text" class="form-control" th:field="*{elemento}">
                 </div>
                 <button type="submit" class="btn btn-primary">Editar</button>
-                <a th:href="@{/distribuidoras/lista}" class="btn btn-danger">Cancelar</a>
+                <a th:href="@{/proveedor}" class="btn btn-danger">Cancelar</a>
             </form>
         </div>
         <div style="background-color: #dae0e8;">
             <div style="padding-top: 10px; padding-bottom: 10px;" class="container">
-                # Grupo - PUCP @ 2022
+                # Grupo 3 PUCP @ 2023
             </div>
 
         </div>
