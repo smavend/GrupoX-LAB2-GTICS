@@ -20,12 +20,27 @@
         </style>
     </head>
     <body>
-        <nav class="navbar navbar-expand bg-primary">
-            <a th:href="@{/proveedor}" class="btn btn-light btn-lg">Proveedor</a>
-            <a th:href="@{/artista}" class="btn btn-light btn-lg">Artista</a>
-            <a th:href="@{/integrante}" class="btn btn-light btn-lg">Integrante</a>
+        <nav class="navbar navbar-expand" style="background-color: #c1d6fa;">
+            <div class="container-fluid">
+                <a class="navbar-brand" th:href="@{/}">
+                    Conciertos Peru
+                </a>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" th:href="@{/proveedor}">Proveedores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/integrante}">Integrantes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/artista}">Artistas</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
-        <a class="btn btn-primary btn-lg">Nuevo concierto</a>
+        <a th:href="@{/nuevoConcierto}" class="btn btn-primary">Nuevo concierto</a>
         <div class="container">
             <table class="table">
                 <thead>
